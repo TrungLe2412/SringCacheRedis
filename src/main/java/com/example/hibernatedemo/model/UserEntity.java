@@ -4,12 +4,13 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+import java.io.Serializable;
+
 
 @Entity
 @Table(name = "user")
 @Data
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class UserEntity {
+public class UserEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

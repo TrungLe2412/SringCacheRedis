@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     @Cacheable("user")
     public List<UserEntity> getAll() {
         System.out.println("vao service getAll");
-        List<UserEntity> userEntity = userRepository.findAll();
+        List<UserEntity> userEntity = userRepository.findByName("trung");
         return userEntity;
     }
 }
