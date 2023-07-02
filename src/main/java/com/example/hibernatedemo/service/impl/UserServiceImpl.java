@@ -16,10 +16,10 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    @Cacheable("user")
+    @Cacheable(value = "user", key = "#root.methodName" )
     public List<UserEntity> getAll() {
         System.out.println("vao service getAll");
-        List<UserEntity> userEntity = userRepository.findByName("trung");
+        List<UserEntity> userEntity = userRepository.findAll();
         return userEntity;
     }
 }
