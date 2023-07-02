@@ -2,10 +2,13 @@ package com.example.hibernatedemo.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 
 @Entity
 @Table(name = "user")
 @Data
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class UserEntity {
 
     @Id
