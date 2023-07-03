@@ -51,6 +51,13 @@
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.hibernate-redis</groupId>
+            <artifactId>hibernate-redis</artifactId>
+            <version>1.6.8</version>
+        </dependency>
+
+
 
     </dependencies>
 

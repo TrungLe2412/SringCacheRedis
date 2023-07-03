@@ -1,4 +1,4 @@
-package com.example.hibernatedemo;
+package com.example.hibernatedemo.controller;
 
 import com.example.hibernatedemo.model.UserEntity;
 import com.example.hibernatedemo.service.UserService;
