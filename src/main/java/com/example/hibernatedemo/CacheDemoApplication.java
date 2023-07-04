@@ -1,6 +1,7 @@
 package com.example.hibernatedemo;
 
 
+import com.example.hibernatedemo.controller.UserController;
 import com.example.hibernatedemo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -15,21 +16,21 @@ import org.springframework.cache.annotation.EnableCaching;
 @Slf4j
 //Annotation @EnableCaching là bắt buộc,
 // nó sử dụng để spring context có thể tìm được các annotation @Cacheable, @CacheEvict, @CachePut
-@EnableCaching
-//public class HibernateDemoApplication implements CommandLineRunner {
+//@EnableCaching
+//public class CacheDemoApplication implements CommandLineRunner {
 
-public class HibernateDemoApplication  {
+public class CacheDemoApplication  {
 
-    private static final Logger logger = LoggerFactory.getLogger(HibernateDemoApplication.class);
+//    private static final Logger logger = LoggerFactory.getLogger(CacheDemoApplication.class);
 
     public static void main(String[] args) {
-        SpringApplication.run(HibernateDemoApplication.class, args);
+        SpringApplication.run(CacheDemoApplication.class, args);
     }
 
 //    @Autowired
 //    private UserService userService;
 //    @Autowired
-//    private  UserController userController;
+//    private UserController userController;
 //    @Override
 //    public void run(String... args) throws Exception {
 //        logger.info("------------------ demo @Cacheable --------------------");
