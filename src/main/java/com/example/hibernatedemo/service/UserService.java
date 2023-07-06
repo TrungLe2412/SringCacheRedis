@@ -11,4 +11,8 @@ public interface UserService {
 
 
     List<UserEntity> getAll();
+
+
+    String addUser(UserEntity user);
+
 }

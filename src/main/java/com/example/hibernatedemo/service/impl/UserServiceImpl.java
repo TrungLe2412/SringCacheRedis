@@ -4,6 +4,7 @@ import com.example.hibernatedemo.UserRepository;
 import com.example.hibernatedemo.model.UserEntity;
 import com.example.hibernatedemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
@@ -18,8 +19,14 @@ public class UserServiceImpl implements UserService {
     @Override
     @Cacheable(value = "user", key = "#root.methodName" )
     public List<UserEntity> getAll() {
-        System.out.println("vao service getAll");
         List<UserEntity> userEntity = userRepository.findAll();
         return userEntity;
+    }
+
+    @Override
+    @CachePut(value = "user", key = "'getAll'" )
+    public String addUser(UserEntity user) {
+        userRepository.save(user);
+        return null;
     }
 }
