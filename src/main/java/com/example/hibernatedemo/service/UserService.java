@@ -13,6 +13,10 @@ public interface UserService {
     List<UserEntity> getAll();
 
 
-    String addUser(UserEntity user);
+    List<UserEntity> addUser(UserEntity user);
+
+
+    List<UserEntity> DelOne (Long userId);
+
 
 }

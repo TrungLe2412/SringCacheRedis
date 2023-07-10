@@ -25,6 +25,11 @@ public class UserController {
         userService.addUser(data);
         return "add thanh cong";
     }
+    @DeleteMapping("/del")
+    public  String Delone (@RequestBody Long userId){
+        userService.DelOne(userId);
+        return "xoa thanh cong";
+    }
 
     @CacheEvict(value = "user", allEntries = true)
     @GetMapping("/clearCache")
